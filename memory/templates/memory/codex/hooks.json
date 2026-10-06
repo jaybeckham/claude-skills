@@ -1,0 +1,66 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "session-start-load.sh",
+            "timeout": 15,
+            "statusMessage": "Loading shared project memory",
+            "additionalContextLimit": 4000
+          }
+        ],
+        "matcher": "startup|resume|clear|compact"
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pre-compact-save.sh",
+            "timeout": 30,
+            "statusMessage": "Saving shared project memory"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "session-end-save.sh",
+            "timeout": 30,
+            "statusMessage": "Saving shared project memory"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "session-end-clear.sh",
+            "timeout": 3,
+            "statusMessage": "Saving shared project memory"
+          }
+        ]
+      }
+    ],
+    "Interrupt": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "interrupt-save.sh",
+            "timeout": 3,
+            "statusMessage": "Saving shared project memory"
+          }
+        ]
+      }
+    ]
+  }
+}

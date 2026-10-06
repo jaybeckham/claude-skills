@@ -1,0 +1,4 @@
+Parts of this skill (the aesthetic-direction list and the anti-generic design guidance) are
+adapted from Anthropic's "frontend-design" skill, https://github.com/anthropics/skills,
+licensed under the Apache License 2.0. Changes: added the product messaging and conversion
+layer, the review workflow, and the worked examples.

@@ -1,0 +1,16 @@
+# Project Memory
+
+## Project
+- Project root: `__PROJECT_DIR__`
+- Resolve the current host's memory directory using `python3 .agents/memory/project_memory.py path`.
+
+## Session context
+- Read recent `sessions/` logs for continuity.
+- `/session-end` or `$session-end` writes a structured handoff.
+- `/curate-memory` or `$curate-memory` organizes durable, supported lessons.
+
+## Topic memory files
+Add links to detailed topic notes as needed. Keep this index under 200 lines.
+
+## Critical reminders
+Search with `python3 .agents/memory/project_memory.py search "query"` before answering from recall.
